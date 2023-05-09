@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
@@ -11,12 +12,13 @@
         <img src="https://cdn-icons-png.flaticon.com/512/5364/5364136.png">
     </div>
     <div class="text-center mt-4 name">
-       ROME
+       ROUSE
     </div>
-    <form class="p-3 mt-3">
+    <form class="p-3 mt-3" method="POST" >
+        @csrf
         <div class="form-field d-flex align-items-center">
-            <span class="far fa-user"></span>
-            <input type="text" name="userName" id="userName" placeholder="Tên đăng nhập ">
+            <span class="far fa-envelope"></span>
+            <input type="email" name="email" id="userName" placeholder="Email">
         </div>
         <div class="form-field d-flex align-items-center">
             <span class="fas fa-key"></span>
@@ -29,3 +31,4 @@
     </div>
 </div>
 </html>
+

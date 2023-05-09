@@ -774,7 +774,7 @@
 </section>
 <!-- / Our Agent Section-->
 
-<!-- Client Testimonial -->
+<!-- client Testimonial -->
 <section id="aa-client-testimonial">
     <div class="container">
         <div class="row">
@@ -838,9 +838,9 @@
         </div>
     </div>
 </section>
-<!-- Client Testimonial -->
+<!-- client Testimonial -->
 
-<!-- Client brand -->
+<!-- client brand -->
 <section id="aa-client-brand">
     <div class="container">
         <div class="row">
@@ -903,7 +903,7 @@
         </div>
     </div>
 </section>
-<!-- / Client brand -->
+<!-- / client brand -->
 
 <!-- Latest blog -->
 <section id="aa-latest-blog">
