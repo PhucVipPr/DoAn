@@ -10,17 +10,17 @@
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
 
     <!-- Font awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href={{asset('css/font-awesome.css')}} rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href={{asset('css/bootstrap.css')}} rel="stylesheet">
     <!-- slick slider -->
-    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href={{asset("css/slick.css")}}>
     <!-- price picker slider -->
-    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+    <link rel="stylesheet" type="text/css" href={{asset("css/nouislider.css")}}>
     <!-- Fancybox slider -->
-    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href={{asset("css/jquery.fancybox.css")}} type="text/css" media="screen" />
     <!-- Theme color -->
-    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">
+    <link id="switcher" href={{asset("css/theme-color/default-theme.css")}} rel="stylesheet">
 
     <!-- Main style sheet -->
     <link href="css/style.css" rel="stylesheet">

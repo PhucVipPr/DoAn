@@ -13,7 +13,8 @@
     <div class="text-center mt-4 name">
         Đăng ký tài khoản
     </div>
-    <form class="p-3 mt-3">
+    <form class="p-3 mt-3" method="POST" action="{{url('register')}}">
+        @csrf
         <div class="form-field d-flex align-items-center">
             <span class="far fa-user"></span>
             <input type="text" name="name" id="userName" placeholder="Tên người dùng">
@@ -30,7 +31,7 @@
             <span class="fas fa-phone"></span>
             <input type="number" name="phone" id="pwd" placeholder="Số điện thoại ">
         </div>
-        <button class="btn mt-3">Xác nhận</button>
+        <button type="submit" class="btn mt-3">Xác nhận</button>
     </form>
     <div class="text-center fs-6">
         <a href="/login">Bạn đã có tài khoản? Đăng nhập ngay</a>

@@ -14,17 +14,22 @@
     <div class="text-center mt-4 name">
        ROUSE
     </div>
-    <form class="p-3 mt-3" method="POST" >
+    @if(\Session::has('message'))
+        <div class="alert alert-info">
+            {{\Session::get('message')}}
+        </div>
+    @endif
+    <form class="p-3 mt-3" method="POST" action="{{url('postLogin')}}">
         @csrf
         <div class="form-field d-flex align-items-center">
             <span class="far fa-envelope"></span>
-            <input type="email" name="email" id="userName" placeholder="Email">
+            <input type="email" name="email" id="email" placeholder="Email" autofocus>
         </div>
         <div class="form-field d-flex align-items-center">
             <span class="fas fa-key"></span>
-            <input type="password" name="password" id="pwd" placeholder="Mật khẩu">
+            <input type="password" name="password" id="password" placeholder="Mật khẩu" autofocus>
         </div>
-        <button class="btn mt-3">Login</button>
+        <button type="submit" class="btn mt-3">Đăng nhập</button>
     </form>
     <div class="text-center fs-6">
         <a href="#">Bạn quên mật khẩu?</a> hay <a href="/register">Đăng ký</a>

@@ -22,12 +22,19 @@ Route::get('/home',function (){
 
 //Trang dang nhap
 Route::get('/login',[\App\Http\Controllers\LoginController::class,'viewLogin']);
-Route::post('/login',[\App\Http\Controllers\LoginController::class,'login']);
+Route::post('/postLogin',[\App\Http\Controllers\LoginController::class,'login']);
+
 //Trang dang ky
 Route::get('/register',[\App\Http\Controllers\RegisterController::class,'viewRegister']);
 Route::post('/register',[\App\Http\Controllers\RegisterController::class,'storeaccount']);
 
 //Dang xuat
 Route::post('/logout',[\App\Http\Controllers\LoginController::class,'logout']);
+
+//client
+Route::get('client/home',[\App\Http\Controllers\ClientController::class,'getClient']);
+
+//admin
+Route::get('admin/home',[\App\Http\Controllers\AdminController::class,'getAdmin']);
 
 

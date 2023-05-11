@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -11,23 +13,23 @@ class LoginController extends Controller
         return view('login');
     }
 
-    function login(Request $request)
+    public function login(Request $request)
     {
-        $email = $request->get('email');
-        $password = $request->get('password');
+        $email = $request->input('email');
+        $password = $request->input('password');
         $rs = Auth::attempt(
             ['email'=>$email,'password'=>$password]
         );
-        if($rs == true){
-            $user = Auth::user();
-            if($user->role == 0){
+        $user = Auth::user();
+        if ($rs == true) {
+            if ($user->role == 0){
                 return redirect('admin/home');
-            }else{
+            } else {
                 return redirect('client/home');
             }
         }else{
-            return redirect('login');
-        }
+            return redirect('login')->with('message',"Thông tin của bạn đang chưa chính xác");
+    }
     }
 
     function logout(Request $request){
